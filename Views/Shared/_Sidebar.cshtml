@@ -1,4 +1,9 @@
 <div class="sidebar">
+  <form method="get" action="/products/search">
+      <input type="text" name="query" placeholder="Пошук продукту..." />
+      <button type="submit">Шукати</button>
+  </form>
+
   <ul>
     <li><a asp-controller="Home" asp-action="Index">Домашня сторнка</a></li>
     <li><a asp-controller="Product" asp-action="List">Переглянути продукти</a></li>

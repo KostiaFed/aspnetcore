@@ -1,12 +1,11 @@
 @model firstwebapp.Models.Product
 @{
-    ViewData["Title"] = "Редагувати продукт";
+    ViewData["Title"] = "Створити продукт";
 }
 
-<h2>Редагувати продукт</h2>
+<h2>Створити новий продукт</h2>
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
+<form asp-action="Create" method="post">
     <div>
         <label asp-for="Name"></label>
         <input asp-for="Name" />
@@ -19,5 +18,5 @@
         <label asp-for="Description"></label>
         <textarea asp-for="Description"></textarea>
     </div>
-    <button type="submit">Зберегти</button>
+    <button type="submit">Створити</button>
 </form>

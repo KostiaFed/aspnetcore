@@ -1,5 +1,20 @@
 @using firstwebapp.Models
+@model Product
 
-@model string
+<h2>Деталі продукту</h2>
 
-<h2>Деталі про продукт: @Model</h2>
+<div>
+  <p><strong>Назва:</strong> @Model.Name</p>
+  <p><strong>Ціна:</strong> @Model.Price грн</p>
+  <p><strong>Опис:</strong> @Model.Description</p>
+</div>
+
+<div>
+  <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редагувати</a>
+  
+  <form asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id" method="post" style="display:inline;">
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Ви впевнені, що хочете видалити цей продукт?');">
+      Видалити
+    </button>
+  </form>
+</div>
