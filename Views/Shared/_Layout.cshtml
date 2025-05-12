@@ -1,0 +1,13 @@
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Лабка Федоренка з ASP.NET</title>
+</head>
+
+<body>
+  <form method="get" action="/products/search">
+      <input type="text" name="query" placeholder="Пошук продукту..." />
+      <button type="submit">Шукати</button>
+  </form>
+
+    @RenderBody()
+</body>

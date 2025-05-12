@@ -1,0 +1,17 @@
+@model List<firstwebapp.Models.Product>
+
+<h2>Результати пошуку: "@ViewBag.Query"</h2>
+
+@if (!Model.Any())
+{
+    <p>Нічого не знайдено.</p>
+}
+else
+{
+    <ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name - @product.Price грн</li>
+    }
+    </ul>
+}

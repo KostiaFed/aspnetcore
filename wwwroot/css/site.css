@@ -29,3 +29,19 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.3rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}

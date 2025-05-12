@@ -1,11 +1,12 @@
 @using firstwebapp.Models
+@model List<Product>
 
-@model List<string>
+@Html.Partial("_Sidebar")
 
 <h2>Products List</h2>
 <ul>
 @foreach (var product in Model)
 {
-    <li>@product</li>
+    <li>@product.Name – @product.Price грн</li>
 }
 </ul>

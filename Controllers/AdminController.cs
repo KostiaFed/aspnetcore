@@ -11,7 +11,7 @@ namespace MyApp.Namespace
     public IActionResult ManageProducts() => View();
     public IActionResult Dashboard() => View();
 
-    public IActionResult RoleBased()
+    public IActionResult Index()
     {
         ViewBag.IsAdmin = User.IsInRole("Admin");
         return View();

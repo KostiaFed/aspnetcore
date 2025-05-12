@@ -6,6 +6,11 @@ namespace MyApp.Namespace
     public class UserController : Controller
     {
         [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
