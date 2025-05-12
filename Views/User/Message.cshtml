@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Повідомлення";
+}
+
+<h2>Введіть повідомлення</h2>
+
+<form id="msgForm" method="post" asp-action="Message">
+    <input type="text" id="msg" name="userMessage" />
+    <input type="submit" value="Send" />
+</form>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+document.getElementById("msgForm").addEventListener("submit", function(e) {
+    var val = document.getElementById("msg").value;
+    if (!val.trim()) {
+        e.preventDefault();
+        document.getElementById("error").innerText = "Повідомлення не може бути порожнім.";
+    }
+});
+</script>

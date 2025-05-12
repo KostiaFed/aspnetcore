@@ -1,15 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-
+using firstwebapp.Models;
 
 namespace MyApp.Namespace
 {
-    [Authorize]
-    public class AdminController : Controller
+  [Authorize]
+  public class AdminController : Controller
+  {
+    public IActionResult ManageUsers() => View();
+    public IActionResult ManageProducts() => View();
+    public IActionResult Dashboard() => View();
+
+    public IActionResult RoleBased()
     {
-        public IActionResult ManageUsers() => View();
-        public IActionResult ManageProducts() => View();
-        public IActionResult Dashboard() => View();
+        ViewBag.IsAdmin = User.IsInRole("Admin");
+        return View();
     }
+
+  }
 
 }

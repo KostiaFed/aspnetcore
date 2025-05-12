@@ -95,3 +95,4 @@
 /home/kostia/Documents/GitHub/firstwebapp/obj/Debug/net9.0/firstwebapp.pdb
 /home/kostia/Documents/GitHub/firstwebapp/obj/Debug/net9.0/firstwebapp.genruntimeconfig.cache
 /home/kostia/Documents/GitHub/firstwebapp/obj/Debug/net9.0/ref/firstwebapp.dll
+/home/kostia/Documents/GitHub/firstwebapp/obj/Debug/net9.0/firstwebapp.sourcelink.json

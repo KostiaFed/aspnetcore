@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using firstwebapp.Models;
 
 namespace MyApp.Namespace
 {
@@ -19,6 +20,16 @@ namespace MyApp.Namespace
         public IActionResult Details(UserModel user)
         {
             return View(user);
+        }
+
+        [HttpGet]
+        public IActionResult Message() => View();
+
+        [HttpPost]
+        public IActionResult Message(string userMessage)
+        {
+            ViewBag.Message = userMessage;
+            return View();
         }
     }
 }

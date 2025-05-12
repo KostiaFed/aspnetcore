@@ -1,0 +1,14 @@
+@using firstwebapp.Models
+
+@model OrderViewModel
+<form asp-action="CreateOrder" method="post">
+    <input asp-for="ProductName" />
+    <span asp-validation-for="ProductName"></span>
+    <input asp-for="Quantity" />
+    <span asp-validation-for="Quantity"></span>
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

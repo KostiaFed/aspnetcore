@@ -1,0 +1,14 @@
+@using firstwebapp.Models
+
+@model List<Product>
+
+<table>
+<tr><th>Name</th><th>Price</th></tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Price</td>
+    </tr>
+}
+</table>
